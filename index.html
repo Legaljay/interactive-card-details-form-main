@@ -19,65 +19,75 @@
   <div class="container">
     <div class="main">
       <div class="rainbow">
-        <div class="rel-cards">
-            <img class="front-card" src="images/bg-card-front.png" alt="card-front" style="position: relative;">
-            <div class="front-overlay" style="position: absolute;">
-              <h1>0000 0000 0000 0000</h1>
+        <!-- <div class="rel-cards"> -->
+          <!-- wrote this -->
+          <div class="card-one">
+            <div class="front-overlay">
+              <img src="images/card-logo.svg" alt="card-logo" width="70px">
+              <h1 class="card-number">0000 0000 0000 0000</h1>
+              <div class="bottom-name">
+                <span class="holder-name">JANE APPLESEED</span>
+                <span class="Exp-date">00/00</span>
+              </div>
             </div>
-            <img class="back-card"  src="images/bg-card-back.png" alt="card-back">
-          <!-- <div style="margin-top: 20px; margin-left: 5rem;"> -->
-          <!-- </div> -->
-        </div>
+          </div>
+          <div class="card-two">
+            <div class="back-overlay">
+              <h1 class="cvc">000</h1>
+            </div>
+          </div>
+        <!-- </div> -->
       </div>
       <div class="text-input">
         <form class="form">
-          <label for="">CARDHOLDER NAME</label>
-          <input type="text" name="" id="" placeholder=" e.g. Jane Appleseed">
-          <label for="">CARD NUMBER</label>
-          <input type="text" placeholder="e.g. 1234 5678 9123 0000">
-          <div class="card-num">
-            <div class="card-year">
-              <label for="">EXP. DATE (MM/YY)</label>
-              <div class="input-yy">
-                <input type="number" placeholder="MM">
-                <input type="number" placeholder="YY">
-              </div>
-            </div>
-            <div class="side-card-cvc">
-              <label for="">CVC</label>
-              <input type="number" placeholder="e.g. 123">
-            </div>
-          </div>
+          <label for="cardholder-name">CARDHOLDER NAME</label>
+          <input id="cardholder-name" type="text" name="" id="" placeholder=" e.g. Jane Appleseed">
+          <label for="card-number">CARD NUMBER</label>
+          <input id="card-number-detail" type="text" placeholder="e.g. 1234 5678 9123 0000">
+          <label id="date" for="">EXP. DATE (MM/YY)</label>
+          <input id="month" type="number" placeholder="MM">
+          <input id="year" type="number" placeholder="YY">
+          <label for="cvc">CVC</label>
+          <input id="cvc" type="number" placeholder="e.g. 123">
           <button>Confirm</button>
         </form>
       </div>
     </div>
   
   </div>
-  <!-- 0000 0000 0000 0000
-  Jane Appleseed
-  00/00
-
-  000 -->
-
-  
- 
-
 
   <!-- Completed state start -->
-<!-- <div class="success-modal">
-  <img src="images/icon-complete.svg" alt="">
-  <h1>Thank you!</h1>
-  <p>We've added your card details</p>
-  <button>Continue</button>
-</div> -->
-  
-  
-  
-  
+  <!-- <div class="success-modal">
+    <img src="images/icon-complete.svg" alt="">
+    <h1>Thank you!</h1>
+    <p>We've added your card details</p>
+    <button>Continue</button>
+  </div> -->
+</body>
+</html>
+
+<!-- <form class="form">
+          <label for="">CARDHOLDER NAME</label>
+          <input id="cardholder-name" type="text" name="" id="" placeholder=" e.g. Jane Appleseed">
+          <label for="">CARD NUMBER</label>
+          <input id="card-number-detail" type="text" placeholder="e.g. 1234 5678 9123 0000">
+          <div class="card-nums">
+            <div class="card-year">
+              <label for="">EXP. DATE (MM/YY)</label>
+              <div class="input-yy">
+                <input id="month" type="number" placeholder="MM">
+                <input id="year" type="number" placeholder="YY">
+              </div>
+            </div>
+            <div class="side-card-cvc">
+              <label for="">CVC</label>
+              <input id="cvc" type="number" placeholder="e.g. 123">
+            </div>
+          </div>
+          <button>Confirm</button>
+        </form> -->
+
   <!--<div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>-->
-</body>
-</html>
