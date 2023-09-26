@@ -45,23 +45,28 @@ body{
 
 .card-one{
     border-radius: 10px;
-    border: 3px solid black;
+    /* border: 3px solid black; */
     display: grid;
     margin-inline: auto;
+    width: -moz-fit-content;
     width: fit-content;
-    height: fit-content;
+    height: auto;
     align-self: flex-end;
     
 }
 
 .card-two{
-    border-radius: 10px;
-    border: 3px solid black;
+    
+    /* border: 3px solid black; */
     display: grid;
     place-items: center;
     margin: 0 50px auto auto;
     align-self: flex-start;
-
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
 }
 
 
@@ -74,6 +79,10 @@ body{
     align-items: center;
     gap: 1rem;
     align-self: flex-end;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
     border-radius: 10px;
 }
 
@@ -81,15 +90,15 @@ body{
     display: block;
     background: no-repeat url(images/bg-card-back.png);
     background-size: 100%;
-    width: 432px;
-    grid-template-rows: 1fr 1fr fit-content();
+    width: 100%;
+    /*432px*/grid-template-rows: 1fr 1fr fit-content();
     gap: 1rem;
     padding-block: 6.7rem;
-    border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    border-radius: 10px;
     display: grid;
     place-items: center;
 }
@@ -105,7 +114,7 @@ body{
 .cvc{
     font-size: 20px;
     text-align: end;
-    padding-right: 5.5rem;
+    margin-right: 5.5rem;
     width: 100%;
     color: var(--White);
 }
@@ -141,14 +150,46 @@ label[for="cvc"]{
     grid-column: 3/5;
 }
 input{ 
-    padding: 20px; border: 0.5px solid grey;
-    border-radius:5px ; -webkit-border-radius:5px ; -moz-border-radius:5px ; -ms-border-radius:5px ; -o-border-radius:5px ; 
+    padding: 20px;
+    border: 0.5px solid grey;
+    -webkit-border-radius:5px ; 
+    -moz-border-radius:5px ; 
+    -ms-border-radius:5px ; 
+    -o-border-radius:5px ; 
+    border-radius:5px ; 
 }
 
-button{ 
-    margin-block-start: 1rem; padding: 10px; color: var(--White); 
+/* button{ 
+    margin-block-start: 1rem; padding: 10px; color: var(--White); cursor: pointer;
     border-radius: 5px; border:.1rem solid var(--Very-dark-violet); 
     background-color: var(--Very-dark-violet); -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; 
+} */
+button{ 
+    margin-block-start: 1rem; 
+    padding: 10px; 
+    color: var(--White); 
+    cursor: pointer;
+    border:.1rem solid var(--Very-dark-violet); 
+    background-color: var(--Very-dark-violet); 
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px; 
+    -ms-border-radius: 5px; 
+    -o-border-radius: 5px; 
+    border-radius: 5px;
+}
+
+.invalid{
+    color: red;
+    border-color: red;
+
+}
+
+.success-modal{
+    display:block;
+}
+
+.hide{
+    display: none;
 }
 
 @media (min-width: 830px){
@@ -164,18 +205,19 @@ button{
     
     .card-one{
         border-radius: 10px;
-        border: 3px solid black;
+        /* border: 3px solid black; */
         display: grid;
         margin-inline: auto;
+        width: -moz-fit-content;
         width: fit-content;
-        height: fit-content;
+        height: auto;
         align-self: flex-end;
         
     }
     
     .card-two{
         border-radius: 10px;
-        border: 3px solid black;
+        /* border: 3px solid black; */
         display: grid;
         place-items: center;
         margin: 0 30px auto auto;
@@ -204,11 +246,11 @@ button{
         grid-template-rows: 1fr 1fr fit-content();
         gap: 1rem;
         padding-block: 5.8rem;
-        border-radius: 10px;
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
         -ms-border-radius: 10px;
         -o-border-radius: 10px;
+        border-radius: 10px;
     }
     
 
@@ -238,18 +280,19 @@ button{
     
     .card-one{
         border-radius: 10px;
-        border: 3px solid black;
+        /* border: 3px solid black; */
         display: grid;
         justify-self: flex-start;
+        width: -moz-fit-content;
         width: fit-content;
-        height: fit-content;
+        height: auto;
         align-self: flex-end;
         
     }
     
     .card-two{
         border-radius: 10px;
-        border: 3px solid black;
+        /* border: 3px solid black; */
         display: grid;
         place-items: center;
         margin: 0 auto auto auto;
@@ -297,24 +340,31 @@ button{
 }
 
 @media (max-width: 550px){
-   
+    .main{display: grid; grid-template-columns: 1fr;}
+    
     .rainbow{
         background: no-repeat url(images/bg-main-mobile.png); 
-        background-size: 100% 65%;
+        background-size: 100% 60%;
+        min-height: -moz-fit-content;
         min-height: fit-content;
         display: grid; 
         grid-template-rows: 1fr 1fr;
         gap: 10px; 
+        justify-content: center;
     }
 
     .card-one{
         order: 1000;
-        margin-top: -80px;
+        align-self: flex-start;
+        margin-top: -55px;
+        margin-right: 2rem;
     }
 
     .card-two{
         order: 1;
-        margin-top: 90px;
+        margin-top: 20px;
+        margin-bottom: -10px;
+        margin-left: 2rem;
     }
 
     .form{
@@ -360,12 +410,14 @@ button{
         color: var(--White);
     }
     .bottom-name{display: flex; justify-content: space-between; color: var(--White);margin-block: .4rem;}
+    .text-input{display: grid; place-items: center; font-size: 18px;}
 
 
     
 }
 @media (max-width: 290px){
     html,body{
+        width: -moz-fit-content;
         width: fit-content;
     }
 }
