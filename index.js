@@ -11,7 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const inputCvc = document.querySelector('#cvc');
     const button = document.querySelector('#btn');
     const error = document.querySelector('#error'); 
-    const main = document.querySelector('.main');
+    const form = document.querySelector('.form');
+    const successBtn = document.querySelector('#success-btn')
 
     const popUp = document.querySelector('#popUp');
     let active = false;
@@ -57,9 +58,9 @@ document.addEventListener('DOMContentLoaded', () => {
     //     error.textContent = Message;
     // }
 
-    function clearErrorMessages() {
-        error.textContent = '';
-    }
+    // function clearErrorMessages() {
+    //     error.textContent = '';
+    // }
 
     function nameValidation() {
         const str = cardName.value;
@@ -85,17 +86,26 @@ document.addEventListener('DOMContentLoaded', () => {
         if (cardNumValidation() && nameValidation() && cardDateCvcValidation()) {
             popUp.classList.remove('hide');
             popUp.classList.add('success-modal');
-            main.classList.add('hide')
+            form.classList.add('hide')
+            form.classList.remove('form')
             changeBorderColor(true);
-            clearErrorMessages();
-        } else {
-            popUp.classList.remove('success-modal');
-            popUp.classList.add('hide');
-            main.classList.remove('hide')
+            //clearErrorMessages();
+        } else{
             // showErrorMessages('Valid information required');
             changeBorderColor(false);
         }
     });
+
+    successBtn.addEventListener('click', () => {
+        
+            popUp.classList.remove('success-modal');
+            popUp.classList.add('hide');
+            form.classList.remove('hide')
+            form.classList.add('form')
+            
+            
+    
+    })
 });
 
 

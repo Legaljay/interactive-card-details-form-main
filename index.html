@@ -39,6 +39,7 @@
         <!-- </div> -->
       </div>
       <div class="text-input">
+
         <form class="form">
           <label for="cardholder-name">CARDHOLDER NAME</label>
           <input id="cardholder-name" type="text" name="" id="" placeholder=" e.g. Jane Appleseed">
@@ -51,14 +52,16 @@
           <input id="cvc" type="number" placeholder="e.g. 123">
           <button id="btn" type="button">Confirm</button>
         </form>
+
+        <!-- Completed state start -->
+        <div id="popUp" class="hide">
+          <img class="success-img" src="images/icon-complete.svg" alt="success">
+          <h1>Thank you!</h1>
+          <p>We've added your card details</p>
+          <button id="success-btn" type="button">Continue</button>
+        </div>
+
       </div>
-    </div>
-    <!-- Completed state start -->
-    <div id="popUp" class="hide">
-      <img src="images/icon-complete.svg" alt="">
-      <h1>Thank you!</h1>
-      <p>We've added your card details</p>
-      <button>Continue</button>
     </div>
   
   </div>
