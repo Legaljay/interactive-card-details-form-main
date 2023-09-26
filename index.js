@@ -33,7 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     cardNum.addEventListener('input', () => {
-        cardNumber.textContent = cardNum.value || "0000 0000 0000 0000";
+        formattedCardNum = cardNum.value.match(/.{1,4}/g)?.join(" ");
+        cardNumber.textContent = formattedCardNum || "0000 0000 0000 0000";
     });
 
     cardName.addEventListener('input', () => {
