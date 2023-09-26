@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
             changeBorderColor(true);
             //clearErrorMessages();
         } else{
-            // showErrorMessages('Valid information required');
+            /* showErrorMessages('Valid information required');*/
             changeBorderColor(false);
         }
     });
